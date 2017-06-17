@@ -1,0 +1,56 @@
+liri psuedocode
+
+
+first import the code from key.js into liri.js
+var keys = imported object of keys from keys.js
+
+var fs = require("fs");
+var request = require("request");
+
+
+ declare variable "command" = process.argv[2] (my-tweets,spotify-this-song,movie-this,do-what-it-says)
+ declare variable "movie_song" = process.argv[3] (movie name, song name) after command == spotify-this-song or movie this
+
+ switch(command){
+  case: "my-tweets"{
+  twitter();
+  break
+  }
+  case: "spotify-this-song"{
+  spotify();
+  break
+  }
+  case: "movie-this"{
+  movie();
+  break;
+  }
+  case: "do-what-it-says"{
+  doSay();
+  }
+ }
+
+ function twitter(){
+ text	String	
+The actual UTF-8 text of the status update. See twitter-text for details on what is currently considered valid characters. Example:
+
+"text":"Tweet Button, Follow Button, and Web Intents javascript now support SSL http:\/\/t.co\/9fbA0oYy ^TS"
+ }
+
+
+created_at	String	
+The UTC datetime that the user account was created on Twitter. Example:
+
+"created_at": "Mon Nov 29 21:18:15 +0000 2010"
+
+
+statuses_count	Int	
+The number of Tweets (including retweets) issued by the user. Example:
+
+"statuses_count": 42
+
+
+
+
+
+
+
