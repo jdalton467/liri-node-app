@@ -1,8 +1,4 @@
 
-
-
-
-
 var command = process.argv[2];//setting a command as the third argument
 // var Twitter = require('twitter');
 var song = process.argv; //setting up a 4th argument for when movie or spotify commands are used
@@ -21,7 +17,7 @@ function reset(){
 		song = contentArr[1];
 
         switch(command){
-        	case contentArr[0]:
+        	case "spotify-this-song":
         		spotify();
         		break;
         }
