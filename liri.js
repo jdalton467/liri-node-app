@@ -3,48 +3,6 @@ var command = process.argv[2];//setting a command as the third argument
 // var Twitter = require('twitter');
 var song = process.argv; //setting up a 4th argument for when movie or spotify commands are used
 
-function reset(){
-	var fs = require('fs'); //calling node filesystem for reading and writing files
-	fs.readFile("random.txt", "utf8", function(err, content){
-		if(err){
-			return console.log(err);
-		}
-	    // console.log(content);
-	    var contentArr = content.split(",");
-	    // console.log(contentArr[0]);
-	    // console.log(contentArr[1]);
-		command = contentArr[0];
-		song = contentArr[1];
-
-        switch(command){
-        	case "spotify-this-song":
-        		spotify();
-        		break;
-        }
-        function spotify(){ // if the spotify function is triggered
-          var Spotify = require('node-spotify-api'); //calling the node spotify npm package
-
-          var keys = require("./keys.js");
-          var spotify = new Spotify(keys.spotifyKeys);
-
-          if(song){
-          spotify.search({type: 'track', query: song, limit:1}, function(err, data){
-	           if(err){
-		          return console.log('Error occured: ' + err);
-	             }
-	           console.log("artist: " + " " + JSON.stringify(data.tracks.items[0].album.artists[0].name, null, 2)); //prints the artist name
-	           console.log("song: " + " " + JSON.stringify(data.tracks.items[0].name, null, 2)); //prints the song name
-	           console.log("album: " + " " + JSON.stringify(data.tracks.items[0].album.name, null, 2)); //prints the album name
-	           console.log("preview: " + " " + JSON.stringify(data.tracks.items[0].preview_url, null, 2)); //p
-
-        });
-
-    }
-   }
- });
-}
-
-
 var song_movie = "";
 var sep = "";
 
@@ -53,10 +11,6 @@ for(var i = 3; i < song.length; i++){
 
 	sep = " ";
 }
-
-
-
-
 
 switch(command){ // setting up a switch case that goes through eash :"scenario commands that are allowed"
 	case "my-tweets"://in case of "my-tweets"
@@ -167,5 +121,44 @@ function movie(){
 	}
 }
 
+function reset(){ // reset function using fs to re-assign the command and song variables
+	var fs = require('fs'); //calling node filesystem for reading and writing files
+	fs.readFile("random.txt", "utf8", function(err, content){
+		if(err){
+			return console.log(err);
+		}
+	    // console.log(content);
+	    var contentArr = content.split(",");
+	    // console.log(contentArr[0]);
+	    // console.log(contentArr[1]);
+		command = contentArr[0]; //"spotify-this-song" from random.txt stored in command
+		song = contentArr[1]; //"I Want It That Way" from random.txt stored in song
 
+        switch(command){ 
+        	case contentArr[0]: //"spotify-this-song"
+        		spotify();
+        		break;
+        }
+        function spotify(){ // if the spotify function is triggered
+          var Spotify = require('node-spotify-api'); //calling the node spotify npm package
+
+          var keys = require("./keys.js");
+          var spotify = new Spotify(keys.spotifyKeys);
+
+          if(song){
+          spotify.search({type: 'track', query: song, limit:1}, function(err, data){
+	           if(err){
+		          return console.log('Error occured: ' + err);
+	             }
+	           console.log("artist: " + " " + JSON.stringify(data.tracks.items[0].album.artists[0].name, null, 2)); //prints the artist name
+	           console.log("song: " + " " + JSON.stringify(data.tracks.items[0].name, null, 2)); //prints the song name
+	           console.log("album: " + " " + JSON.stringify(data.tracks.items[0].album.name, null, 2)); //prints the album name
+	           console.log("preview: " + " " + JSON.stringify(data.tracks.items[0].preview_url, null, 2)); //p
+
+        });
+
+    }
+   }
+ });
+}
 
