@@ -1,4 +1,7 @@
 
+var keys = require("./keys.js"); //importing access keys for twitter and spotify
+
+
 var command = process.argv[2];//setting a command as the third argument
 // var Twitter = require('twitter');
 var song = process.argv; //setting up a 4th argument for when movie or spotify commands are used
@@ -29,8 +32,7 @@ switch(command){ // setting up a switch case that goes through eash :"scenario c
 
 function twitter(){
 var Twitter = require('twitter');// using the require key word to access the npm twitter package
- 
-var keys = require("./keys.js"); // importing a module containing authorization keys to access the twitter api
+  
 
 var client = new Twitter(keys.twitterKeys); // storing the imported keys in object client
  
@@ -51,7 +53,6 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
 function spotify(){ // if the spotify function is triggered
 var Spotify = require('node-spotify-api'); //calling the node spotify npm package
 
-var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotifyKeys);
 
 if(song_movie){
@@ -142,7 +143,7 @@ function reset(){ // reset function using fs to re-assign the command and song v
         function spotify(){ // if the spotify function is triggered
           var Spotify = require('node-spotify-api'); //calling the node spotify npm package
 
-          var keys = require("./keys.js");
+      
           var spotify = new Spotify(keys.spotifyKeys);
 
           if(song){
