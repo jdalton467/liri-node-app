@@ -36,7 +36,7 @@ var Twitter = require('twitter');// using the require key word to access the npm
 
 var client = new Twitter(keys.twitterKeys); // storing the imported keys in object client
  
-var params = {screen_name: 'DailyShowJon', count:21}; // setting the count up to 21
+var params = {screen_name: 'jpop4567', count:21}; // setting the count up to 21
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
   if (!error) {
   	for(i = 1; i < params.count; i++){ //looping through the count parameter to print out the 20 most recent tweets
