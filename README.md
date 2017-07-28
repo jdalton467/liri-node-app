@@ -1,6 +1,6 @@
 # liri-node-app
 
-A neat terminal application that lets users skim information about their favorite movie, song , or twitter account.
+A neat terminal application that lets users skim information about their favorite movie, song , or Twitter account.
 
 This app requests information from the Twitter, Spotify, and OMDb APIs and displays it to the user from the terminal.
 
