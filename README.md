@@ -8,7 +8,7 @@ If the user wants to find out info about their favorite song, then they can simp
 
 Want to find out who directed the Titanic? Just type node liri.js movie-this Titanic
 
-Recieve the latest 20 tweets from your favorite celebrity by writing node liri.js my-twitter
+Recieve the latest 20 tweets from your favorite celebrity by writing node liri.js my-tweets
 
 It's a fun app that can display a wealth of information! This was an exercise in performing GET requests with Ajax calls and learing how to work with different APIs
 
