@@ -11,3 +11,5 @@ Want to find out who directed the Titanic? Just type node liri.js movie-this Tit
 Recieve the latest 20 tweets from your favorite celebrity by writing node liri.js my-twitter
 
 It's a fun app that can display a wealth of information! This was an exercise in performing GET requests with Ajax calls and learing how to work with different APIs
+
+![screenshot 35](https://user-images.githubusercontent.com/21977931/29147212-b192608a-7d33-11e7-91ef-5fac0d45c494.png)
