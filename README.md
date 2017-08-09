@@ -13,3 +13,5 @@ Recieve the latest 20 tweets from your favorite celebrity by writing node liri.j
 It's a fun app that can display a wealth of information! This was an exercise in performing GET requests with Ajax calls and learing how to work with different APIs
 
 ![screenshot 35](https://user-images.githubusercontent.com/21977931/29147212-b192608a-7d33-11e7-91ef-5fac0d45c494.png)
+
+![screenshot 36](https://user-images.githubusercontent.com/21977931/29147289-04708908-7d34-11e7-8042-6b655ca4b647.png)
