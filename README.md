@@ -17,6 +17,10 @@ It's a fun app that can display a wealth of information! This was an exercise in
 * Spotify
 * OMDb
 
+# Example
+In terminal type:
+    node liri.js my-tweets
+
 # Sample Code
 Based on the node command, a function will be called that will make a GET request to a particular API
 
