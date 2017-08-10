@@ -18,7 +18,7 @@ It's a fun app that can display a wealth of information! This was an exercise in
 * OMDb
 
 # Example
-In terminal type:
+  
     node liri.js my-tweets
 
 # Sample Code
