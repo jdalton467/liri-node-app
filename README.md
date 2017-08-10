@@ -17,7 +17,44 @@ It's a fun app that can display a wealth of information! This was an exercise in
 * Spotify
 * OMDb
 
+# Sample Code
+switch (command) { // setting up a switch case that goes through eash :"scenario commands that are allowed"
+    case "my-tweets": //in case of "my-tweets"
+        twitter(); //execute the twitter function;
+        break;
+    case "spotify-this-song":
+        spotify();
+        break;
+    case "movie-this":
+        movie();
+        break;
+    case "do-what-it-says":
+        reset();
+        break;
+}
 
+function twitter() {
+    var Twitter = require('twitter'); // using the require key word to access the npm twitter package
+
+
+    var client = new Twitter(keys.twitterKeys); // storing the imported keys in object client
+
+    var params = {
+        screen_name: 'neiltyson',
+        count: 21
+    }; // setting the count up to 21
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+        if (!error) {
+            for (i = 1; i < params.count; i++) { //looping through the count parameter to print out the 20 most recent tweets
+                console.log(i + "." + " " + tweets[i].text); //rendering the text of the status
+                console.log("created at" + " " + tweets[i].created_at); //rendering the time the status was created
+                console.log(""); // creating a line space underneath
+
+            }
+        }
+    });
+
+}
 
 
 # my-tweets
