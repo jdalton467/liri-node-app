@@ -13,9 +13,9 @@ Recieve the latest 20 tweets from your favorite celebrity by writing node liri.j
 It's a fun app that can display a wealth of information! This was an exercise in performing GET requests with Ajax calls and learing how to work with different APIs
 
 # APIs
-*Twitter
-*Spotify
-*OMDb
+* Twitter
+* Spotify
+* OMDb
 
 
 
