@@ -21,7 +21,7 @@ It's a fun app that can display a wealth of information! This was an exercise in
 
 
 # my-tweets
-![screenshot 35](https://user-images.githubusercontent.com/21977931/29147212-b192608a-7d33-11e7-91ef-5fac0d45c494.png)
+![screenshot 38](https://user-images.githubusercontent.com/21977931/29149634-7c7cf8dc-7d43-11e7-8080-2075091e1940.png)
 
 # movie-this
 ![screenshot 36](https://user-images.githubusercontent.com/21977931/29147289-04708908-7d34-11e7-8042-6b655ca4b647.png)
